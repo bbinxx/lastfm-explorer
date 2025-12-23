@@ -429,8 +429,7 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`\n🎵 Last.fm API Explorer is running!`);
-    console.log(`📡 Server: http://localhost:${PORT}`);
-    console.log(`👤 Default User: ${DEFAULT_USER}`);
-    console.log(`🔑 API Key: ${API_KEY ? 'Configured' : 'Not Set'}\n`);
+    console.log(`\n[*] Last.fm API Explorer is running!`);
+    console.log(`[>] Server: http://localhost:${PORT}`);
+    console.log(`[i] API Key: ${API_KEY ? 'Configured' : 'Not Set'}\n`);
 });
