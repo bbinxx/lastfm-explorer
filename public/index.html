@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last.fm API Explorer | Music Discovery Platform</title>
+    <meta name="description"
+        content="Explore the Last.fm API with a beautiful interface. Discover artists, tracks, albums, and your listening history.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">🎵</span>
+                <span class="logo-text">Last.fm<span class="logo-highlight">Explorer</span></span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <div class="nav-section">
+                <h3 class="nav-section-title">Dashboard</h3>
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Overview</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <h3 class="nav-section-title">User</h3>
+                <a href="#" class="nav-item" data-section="user-info">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-text">User Info</span>
+                </a>
+                <a href="#" class="nav-item" data-section="recent-tracks">
+                    <span class="nav-icon">🎧</span>
+                    <span class="nav-text">Recent Tracks</span>
+                </a>
+                <a href="#" class="nav-item" data-section="top-artists">
+                    <span class="nav-icon">⭐</span>
+                    <span class="nav-text">Top Artists</span>
+                </a>
+                <a href="#" class="nav-item" data-section="top-albums">
+                    <span class="nav-icon">💿</span>
+                    <span class="nav-text">Top Albums</span>
+                </a>
+                <a href="#" class="nav-item" data-section="top-tracks">
+                    <span class="nav-icon">🎵</span>
+                    <span class="nav-text">Top Tracks</span>
+                </a>
+                <a href="#" class="nav-item" data-section="loved-tracks">
+                    <span class="nav-icon">❤️</span>
+                    <span class="nav-text">Loved Tracks</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <h3 class="nav-section-title">Search & Discover</h3>
+                <a href="#" class="nav-item" data-section="artist-search">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">Artist Search</span>
+                </a>
+                <a href="#" class="nav-item" data-section="track-search">
+                    <span class="nav-icon">🎼</span>
+                    <span class="nav-text">Track Search</span>
+                </a>
+                <a href="#" class="nav-item" data-section="album-search">
+                    <span class="nav-icon">📀</span>
+                    <span class="nav-text">Album Search</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <h3 class="nav-section-title">Charts</h3>
+                <a href="#" class="nav-item" data-section="chart-artists">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Top Artists</span>
+                </a>
+                <a href="#" class="nav-item" data-section="chart-tracks">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Top Tracks</span>
+                </a>
+                <a href="#" class="nav-item" data-section="geo-charts">
+                    <span class="nav-icon">🌍</span>
+                    <span class="nav-text">By Country</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <h3 class="nav-section-title">Tags & Genres</h3>
+                <a href="#" class="nav-item" data-section="top-tags">
+                    <span class="nav-icon">🏷️</span>
+                    <span class="nav-text">Top Tags</span>
+                </a>
+                <a href="#" class="nav-item" data-section="tag-explore">
+                    <span class="nav-icon">🔖</span>
+                    <span class="nav-text">Explore by Tag</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-config">
+                <input type="text" id="usernameInput" placeholder="Last.fm Username" class="config-input">
+                <button id="updateUser" class="config-btn">Update</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <header class="header">
+            <div class="header-left">
+                <h1 class="page-title" id="pageTitle">Dashboard</h1>
+                <p class="page-subtitle" id="pageSubtitle">Welcome to Last.fm API Explorer</p>
+            </div>
+            <div class="header-right">
+                <div class="current-user">
+                    <span class="user-label">Current User:</span>
+                    <span class="user-name" id="currentUsername">Loading...</span>
+                </div>
+                <div class="now-playing" id="nowPlaying">
+                    <div class="now-playing-indicator">
+                        <span class="pulse-dot"></span>
+                        <span id="nowPlayingText">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper" id="contentWrapper">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </main>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
