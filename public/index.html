@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -22,11 +26,27 @@
         <div class="gradient-orb orb-3"></div>
     </div>
 
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-music"></i></span>
+            <span class="logo-text">Last.fm<span class="logo-highlight">Explorer</span></span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <span class="logo-icon">🎵</span>
+                <span class="logo-icon"><i class="fas fa-music"></i></span>
                 <span class="logo-text">Last.fm<span class="logo-highlight">Explorer</span></span>
             </div>
             <button class="sidebar-toggle" id="sidebarToggle">
@@ -40,7 +60,7 @@
             <div class="nav-section">
                 <h3 class="nav-section-title">Dashboard</h3>
                 <a href="#" class="nav-item active" data-section="dashboard">
-                    <span class="nav-icon">🏠</span>
+                    <span class="nav-icon"><i class="fas fa-home"></i></span>
                     <span class="nav-text">Overview</span>
                 </a>
             </div>
@@ -48,27 +68,27 @@
             <div class="nav-section">
                 <h3 class="nav-section-title">User</h3>
                 <a href="#" class="nav-item" data-section="user-info">
-                    <span class="nav-icon">👤</span>
+                    <span class="nav-icon"><i class="fas fa-user"></i></span>
                     <span class="nav-text">User Info</span>
                 </a>
                 <a href="#" class="nav-item" data-section="recent-tracks">
-                    <span class="nav-icon">🎧</span>
+                    <span class="nav-icon"><i class="fas fa-headphones"></i></span>
                     <span class="nav-text">Recent Tracks</span>
                 </a>
                 <a href="#" class="nav-item" data-section="top-artists">
-                    <span class="nav-icon">⭐</span>
+                    <span class="nav-icon"><i class="fas fa-star"></i></span>
                     <span class="nav-text">Top Artists</span>
                 </a>
                 <a href="#" class="nav-item" data-section="top-albums">
-                    <span class="nav-icon">💿</span>
+                    <span class="nav-icon"><i class="fas fa-compact-disc"></i></span>
                     <span class="nav-text">Top Albums</span>
                 </a>
                 <a href="#" class="nav-item" data-section="top-tracks">
-                    <span class="nav-icon">🎵</span>
+                    <span class="nav-icon"><i class="fas fa-music"></i></span>
                     <span class="nav-text">Top Tracks</span>
                 </a>
                 <a href="#" class="nav-item" data-section="loved-tracks">
-                    <span class="nav-icon">❤️</span>
+                    <span class="nav-icon"><i class="fas fa-heart"></i></span>
                     <span class="nav-text">Loved Tracks</span>
                 </a>
             </div>
@@ -76,15 +96,15 @@
             <div class="nav-section">
                 <h3 class="nav-section-title">Search & Discover</h3>
                 <a href="#" class="nav-item" data-section="artist-search">
-                    <span class="nav-icon">🔍</span>
+                    <span class="nav-icon"><i class="fas fa-search"></i></span>
                     <span class="nav-text">Artist Search</span>
                 </a>
                 <a href="#" class="nav-item" data-section="track-search">
-                    <span class="nav-icon">🎼</span>
+                    <span class="nav-icon"><i class="fas fa-file-audio"></i></span>
                     <span class="nav-text">Track Search</span>
                 </a>
                 <a href="#" class="nav-item" data-section="album-search">
-                    <span class="nav-icon">📀</span>
+                    <span class="nav-icon"><i class="fas fa-record-vinyl"></i></span>
                     <span class="nav-text">Album Search</span>
                 </a>
             </div>
@@ -92,15 +112,15 @@
             <div class="nav-section">
                 <h3 class="nav-section-title">Charts</h3>
                 <a href="#" class="nav-item" data-section="chart-artists">
-                    <span class="nav-icon">📊</span>
+                    <span class="nav-icon"><i class="fas fa-chart-bar"></i></span>
                     <span class="nav-text">Top Artists</span>
                 </a>
                 <a href="#" class="nav-item" data-section="chart-tracks">
-                    <span class="nav-icon">📈</span>
+                    <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
                     <span class="nav-text">Top Tracks</span>
                 </a>
                 <a href="#" class="nav-item" data-section="geo-charts">
-                    <span class="nav-icon">🌍</span>
+                    <span class="nav-icon"><i class="fas fa-globe"></i></span>
                     <span class="nav-text">By Country</span>
                 </a>
             </div>
@@ -108,11 +128,11 @@
             <div class="nav-section">
                 <h3 class="nav-section-title">Tags & Genres</h3>
                 <a href="#" class="nav-item" data-section="top-tags">
-                    <span class="nav-icon">🏷️</span>
+                    <span class="nav-icon"><i class="fas fa-tags"></i></span>
                     <span class="nav-text">Top Tags</span>
                 </a>
                 <a href="#" class="nav-item" data-section="tag-explore">
-                    <span class="nav-icon">🔖</span>
+                    <span class="nav-icon"><i class="fas fa-bookmark"></i></span>
                     <span class="nav-text">Explore by Tag</span>
                 </a>
             </div>
