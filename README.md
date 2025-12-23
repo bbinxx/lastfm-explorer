@@ -47,8 +47,8 @@ A beautiful, modern web application for exploring the Last.fm API. Built with No
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/lastfm-api-explorer.git
-   cd lastfm-api-explorer
+   git clone https://github.com/bbinxx/lastfm-explorer.git
+   cd lastfm-explorer
    ```
 
 2. **Install dependencies**
