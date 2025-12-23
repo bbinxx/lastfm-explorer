@@ -266,7 +266,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/yourusername/lastfm-api-explorer/issues).
+If you encounter any issues or have questions, please [open an issue](https://github.com/bbinxx/lastfm-api-explorer/issues).
 
 ---
 
